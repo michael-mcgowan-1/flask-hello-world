@@ -8,13 +8,13 @@ def hello_world():
     return 'Hello World from Michael McGowan in 3308'
 
 
-@app.route('/db_test/')
+@app.route('/db_test')
 def testing():
     conn = psycopg2.connect("postgresql://mimc5172_flask_hello_database_user:ysYGiRVYygPQ2C7szDG6d67p7jHq2PbY@dpg-d4b8kendiees73adp6j0-a/mimc5172_flask_hello_database")
     conn.close()
     return "Database Connection Successful"
 
-@app.route('/db_create/')
+@app.route('/db_create')
 def creating():
     conn = psycopg2.connect("postgresql://mimc5172_flask_hello_database_user:ysYGiRVYygPQ2C7szDG6d67p7jHq2PbY@dpg-d4b8kendiees73adp6j0-a/mimc5172_flask_hello_database")
     cur = conn.cursor()
